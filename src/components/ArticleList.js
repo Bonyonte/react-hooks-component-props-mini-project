@@ -3,7 +3,8 @@ import Article from "./Article";
 
 function ArticleList(posts) {
 
-    const articles =posts.map((post) =>{
+    const articleArray =posts.map((post) =>{
+      return(  
         <Article
         key={post.id}
         title={post.title}
@@ -11,10 +12,10 @@ function ArticleList(posts) {
         preview={post.preview}
         minutes={post.minutes}
         />
+      );
     });
-    return
-    <main>
-        {articles}
+    return<main>
+        {articleArray}
     </main>
 }
 
